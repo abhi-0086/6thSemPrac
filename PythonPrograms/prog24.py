@@ -1,6 +1,6 @@
 #program to display power of 2 using anonymous function
 
-num_terms = int(input("Enter nnumber of terms : "))
+num_terms = int(input("Enter number of terms : "))
 
 #use anonymous function
 result = list(map(lambda x:2**x,range(num_terms)))
