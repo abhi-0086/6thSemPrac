@@ -2,7 +2,6 @@
 
 def image_res(filename):
     #this function pprints resolution of image passed to it
-    
     #open image for reading in binary mode
     with open(filename, 'rb') as img_file:
 

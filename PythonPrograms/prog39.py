@@ -1,4 +1,4 @@
-#write a program to spilit a list into evenly sized chunks
+#write a program to split a list into evenly sized chunks
 
 def chunkify(lst, chunk_size):
     """
@@ -15,7 +15,6 @@ def chunkify(lst, chunk_size):
 
 #ask for chunk size from user
 chunk_size = int(input("Enter chunk size : "))
-
 my_list = []
 size = int(input("Enter number of elemnts in list : "))
 
