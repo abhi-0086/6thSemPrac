@@ -1,9 +1,6 @@
 //Program 18 - Bellman Ford algo
 
-#include <iostream>
-#include <vector>
-#include <limits>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 // A structure to represent a weighted edge in the graph
@@ -85,3 +82,22 @@ int main() {
 }
 
 
+// Enter the number of vertices in the graph: 5
+// Enter the number of edges in the graph: 8
+// Enter the source vertex, destination vertex, and weight of edge 1: 0 1 6
+// Enter the source vertex, destination vertex, and weight of edge 2: 0 3 2
+// Enter the source vertex, destination vertex, and weight of edge 3: 1 2 1
+// Enter the source vertex, destination vertex, and weight of edge 4: 2 4 4
+// Enter the source vertex, destination vertex, and weight of edge 5: 2 1 3
+// Enter the source vertex, destination vertex, and weight of edge 6: 3 1 3
+// Enter the source vertex, destination vertex, and weight of edge 7: 3 4 6
+// Enter the source vertex, destination vertex, and weight of edge 8: 4 3 3
+// Enter the source vertex: 0
+
+
+// Vertex   Distance from Source
+// 0                0
+// 1                6
+// 2                7
+// 3                2
+// 4                10

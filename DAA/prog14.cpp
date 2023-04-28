@@ -1,9 +1,6 @@
 //program 14 - Depth First Search
 
-#include <iostream>
-#include <vector>
-#include <stack>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 // Function to perform DFS
@@ -61,6 +58,7 @@ int main() {
 
     // Perform DFS starting from the given node
     DFS(graph, start);
+    cout <<endl;
 
     return 0;
 }

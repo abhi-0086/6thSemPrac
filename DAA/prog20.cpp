@@ -48,3 +48,17 @@ int main() {
 
     return 0;
 }
+
+// Enter the number of vertices (n) and edges (m) in the graph: 4 5
+// Enter the edges and their weights in the format (u, v, w):
+// 1 2 5
+// 1 4 9
+// 2 3 2
+// 3 1 7
+// 3 4 1
+
+// Shortest distances between all pairs of vertices:
+// 0 5 7 9 
+// 7 0 2 4 
+// 3 8 0 1 
+// 5 10 12 0 

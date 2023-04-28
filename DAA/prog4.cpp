@@ -42,7 +42,12 @@ void quickSort(vector<int>& arr, int left, int right) {
 int main() {
     // Example usage of the quickSort function
     vector<int> arr = {5, 2, 9, 1, 5, 6};
+    cout << "\nBefore Sorting -> ";
+    for(int i=0; i<6; i++)
+        cout << arr[i] << " ";
+    cout << endl;
     quickSort(arr, 0, arr.size() - 1);
+    cout << "\nAfter Sorting -> ";
     for (int num : arr) {
         cout << num << " ";
     }

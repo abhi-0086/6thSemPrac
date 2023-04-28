@@ -1,8 +1,6 @@
 //program 11 - Strassen Multiplication Algo
 
-#include <iostream>
-#include <vector>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 vector<vector<int>> matrix_add(vector<vector<int>> A, vector<vector<int>> B) {
