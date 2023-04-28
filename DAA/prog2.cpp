@@ -45,3 +45,5 @@ int main()
     
     return 0;
 }
+// Time Complexity θ(log(n))
+// Auxiliary Space: O(1)

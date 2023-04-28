@@ -41,3 +41,7 @@ int main() {
     cout << endl;
     return 0;
 }
+
+//                 Best  Average  Worst
+// Insertion Sort: Ω(n)  θ(n^2)   O(n^2)
+// Auxiliary Space: O(1)
