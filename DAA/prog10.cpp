@@ -3,11 +3,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void bucketSort(float arr[], int n)
-{
+void bucketSort(float arr[], int n){
     // Create n empty buckets
     vector<float> b[n];
-    
     // Put array elements in different buckets
     for (int i = 0; i < n; i++) {
         int bi = n * arr[i];
@@ -23,8 +21,7 @@ void bucketSort(float arr[], int n)
             arr[index++] = b[i][j];
 }
  
-int main()
-{
+int main(){
     int n;
     cout << "Enter the number of elements in the array: ";
     cin >> n;
@@ -37,7 +34,6 @@ int main()
     for(int i = 0; i < n; i++)
         cout << arr[i] << " ";
     cout << endl;
-    
     return 0;
 }
 

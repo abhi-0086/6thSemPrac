@@ -1,6 +1,6 @@
 //program 5 - Merge Sort
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Function to merge two sorted subarrays
@@ -11,12 +11,10 @@ void merge(int arr[], int l, int m, int r) {
     int L[n1], R[n2];
 
     // Copy data to temporary arrays
-    for (int i = 0; i < n1; i++) {
+    for (int i = 0; i < n1; i++) 
         L[i] = arr[l + i];
-    }
-    for (int j = 0; j < n2; j++) {
+    for (int j = 0; j < n2; j++) 
         R[j] = arr[m + 1 + j];
-    }
 
     // Merge the temporary arrays back into the original array
     int i = 0;  // Index of left subarray
@@ -51,11 +49,9 @@ void merge(int arr[], int l, int m, int r) {
 void mergeSort(int arr[], int l, int r) {
     if (l < r) {
         int m = l + (r - l) / 2; // Calculate the middle index
-
         // Recursively sort the left and right subarrays
         mergeSort(arr, l, m);
         mergeSort(arr, m + 1, r);
-
         // Merge the two sorted subarrays
         merge(arr, l, m, r);
     }
@@ -66,7 +62,6 @@ int main() {
     int n;
     cout << "Enter the size of the array: ";
     cin >> n;
-
     int arr[n];
     cout << "Enter the array elements: ";
     for (int i = 0; i < n; i++) 

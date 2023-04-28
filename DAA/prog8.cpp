@@ -1,8 +1,7 @@
 //program 8 - Counting sort
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-#include <algorithm>
 
 void counting_sort(int arr[], int n) {
   // Find the range of the input array
@@ -34,14 +33,11 @@ int main() {
   int n;
   cout << "Enter the number of elements: ";
   cin >> n;
-
   int arr[n];
   cout << "Enter the elements:\n";
   for (int i = 0; i < n; ++i) 
     cin >> arr[i];
-
   counting_sort(arr, n);
-
   cout << "Sorted array: ";
   for (int i = 0; i < n; ++i)
     cout << arr[i] << " ";

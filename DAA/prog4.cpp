@@ -8,7 +8,6 @@ void quickSort(vector<int>& arr, int left, int right) {
         // Base case: the sub-array has zero or one elements
         return;
     }
-    
     // Choose a pivot element from the sub-array
     int pivotIndex = left + (right - left) / 2;
     int pivot = arr[pivotIndex];
@@ -31,12 +30,10 @@ void quickSort(vector<int>& arr, int left, int right) {
     }
     
     // Recursively apply quickSort to the sub-arrays
-    if (left < j) {
+    if (left < j)
         quickSort(arr, left, j);
-    }
-    if (i < right) {
+    if (i < right)
         quickSort(arr, i, right);
-    }
 }
 
 int main() {

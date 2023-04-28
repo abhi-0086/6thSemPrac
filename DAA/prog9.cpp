@@ -1,6 +1,6 @@
 //program 9 - Radix sort
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Function to find the maximum value in an array
@@ -18,7 +18,6 @@ int findMax(int arr[], int n) {
 void countingSort(int arr[], int n, int exp) {
     int output[n];
     int count[10] = {0};
-
     // Counting the frequency of digits
     for (int i = 0; i < n; i++) 
         count[(arr[i] / exp) % 10]++;
@@ -36,7 +35,6 @@ void countingSort(int arr[], int n, int exp) {
     for (int i = 0; i < n; i++) 
         arr[i] = output[i];
 }
-
 // Function to perform radix sort on an array
 void radixSort(int arr[], int n) {
     int max = findMax(arr, n);
@@ -45,7 +43,6 @@ void radixSort(int arr[], int n) {
         countingSort(arr, n, exp);
     }
 }
-
 // Main function to take input and call the radix sort function
 int main() {
     int n;
@@ -63,6 +60,5 @@ int main() {
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
     cout << endl;
-
     return 0;
 }

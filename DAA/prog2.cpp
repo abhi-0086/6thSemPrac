@@ -2,13 +2,11 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-
 void input_array(vector<int> &v, int size)
 {
     for(int i=0; i<size; i++)
         cin >> v[i];
 }
-
 int binary_search(vector<int> v, int key)
 {
     int lo = 0;

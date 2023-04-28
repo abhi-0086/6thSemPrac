@@ -2,21 +2,16 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-
-void input_array(vector<int> &v, int size)
-{
+void input_array(vector<int> &v, int size){
     for(int i=0; i<size; i++)
         cin >> v[i];
 }
 
-int linear_search(vector<int> v, int key)
-{
+int linear_search(vector<int> v, int key){
     //linearly traverse each element of array and check if it is equal to search value if yes return the particular index
     for(int i=0; i<v.size(); i++)
-    {
         if(v[i] == key)
             return i;
-    }
     //after complete traversal, means search value not present return -1
     return -1;
 }

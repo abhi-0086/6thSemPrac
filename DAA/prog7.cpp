@@ -1,6 +1,6 @@
 //program 7 - Heap Sort implementation
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Function to heapify a subtree rooted at index i
@@ -32,12 +32,10 @@ void heapSort(int arr[], int n) {
     for (int i = n / 2 - 1; i >= 0; i--) {
         heapify(arr, n, i);
     }
-
     // Extract elements from heap one by one
     for (int i = n - 1; i > 0; i--) {
         // Move current root to end
         swap(arr[0], arr[i]);
-
         // Call heapify on the reduced heap
         heapify(arr, i, 0);
     }
@@ -53,10 +51,8 @@ int main() {
     cout << "Enter the array elements: ";
     for (int i = 0; i < n; i++)
         cin >> arr[i];
-
     // Call heapSort function to sort the array
     heapSort(arr, n);
-
     // Print the sorted array
     cout << "Sorted array: ";
     for (int i = 0; i < n; i++)

@@ -2,7 +2,6 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-
 vector<vector<int>> matrix_add(vector<vector<int>> A, vector<vector<int>> B) {
     int n = A.size();
     int m = A[0].size();
@@ -14,7 +13,6 @@ vector<vector<int>> matrix_add(vector<vector<int>> A, vector<vector<int>> B) {
     }
     return C;
 }
-
 vector<vector<int>> matrix_subtract(vector<vector<int>> A, vector<vector<int>> B) {
     int n = A.size();
     int m = A[0].size();
@@ -26,7 +24,6 @@ vector<vector<int>> matrix_subtract(vector<vector<int>> A, vector<vector<int>> B
     }
     return C;
 }
-
 vector<vector<int>> strassen(vector<vector<int>> A, vector<vector<int>> B) {
     int n = A.size();
     if (n == 1) {

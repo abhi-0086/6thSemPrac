@@ -2,29 +2,22 @@
 
 #include <bits/stdc++.h>  // Include all standard libraries
 using namespace std;
-
 // A structure to represent a directed edge between two vertices
 struct Edge {
     int u, v, w;  // 'u' is the source vertex, 'v' is the destination vertex and 'w' is the weight of the edge
 };
-
 // A function to find the maximum flow from source 's' to sink 't' in a graph represented by adjacency matrix 'graph'
 int fordFulkerson(vector<vector<int>>& graph, int s, int t) {
     int V = graph.size();  // Get the number of vertices in the graph
-
     // Initialize the residual graph with the same capacities as the original graph
     vector<vector<int>> residualGraph(V, vector<int>(V));
-    for (int i = 0; i < V; i++) {
-        for (int j = 0; j < V; j++) {
+    for (int i = 0; i < V; i++) 
+        for (int j = 0; j < V; j++) 
             residualGraph[i][j] = graph[i][j];
-        }
-    }
 
     // Initialize the parent array for BFS
     vector<int> parent(V);
-
     int maxFlow = 0;  // Initialize the maximum flow to 0
-
     // Augment the flow while there is a path from source to sink in the residual graph
     while (true) {
         // Use BFS to find a path from source to sink in the residual graph
@@ -42,30 +35,25 @@ int fordFulkerson(vector<vector<int>>& graph, int s, int t) {
                 }
             }
         }
-
         // If there is no path from source to sink in the residual graph, we have reached the maximum flow
         if (parent[t] == -1) {
             break;
         }
-
         // Find the bottleneck capacity of the augmenting path
         int bottleneckCapacity = INT_MAX;
         for (int v = t; v != s; v = parent[v]) {
             int u = parent[v];
             bottleneckCapacity = min(bottleneckCapacity, residualGraph[u][v]);
         }
-
         // Update the residual capacities of the edges and reverse edges along the augmenting path
         for (int v = t; v != s; v = parent[v]) {
             int u = parent[v];
             residualGraph[u][v] -= bottleneckCapacity;
             residualGraph[v][u] += bottleneckCapacity;
         }
-
         // Add the bottleneck capacity to the maximum flow
         maxFlow += bottleneckCapacity;
     }
-
     // Return the maximum flow
     return maxFlow;
 }
@@ -76,10 +64,8 @@ int main() {
     cin >> V;
     cout << "Enter the number of edges: ";
     cin >> E;
-
     // Initialize the graph as an adjacency matrix
     vector<vector<int>> graph(V, vector<int>(V));
-
     // Take input for all the edges
     for (int i = 0; i < E; i++) {
         int u, v, w;
@@ -87,17 +73,14 @@ int main() {
         cin >> u >> v >> w;
         graph[u][v] = w;
     }
-
     // Take input for source and sink
     cout << "Enter the source vertex: ";
     cin >> s;
     cout << "Enter the sink vertex: ";
     cin >> t;
-
     int maxFlow = fordFulkerson(graph, s, t);  // Calculate the maximum flow using the Ford-Fulkerson Algorithm
-
     cout << "The maximum flow from vertex " << s << " to vertex " << t << " is: " << maxFlow << endl;  // Output the maximum flow
-
+    
     return 0;  // Return 0 to indicate successful completion of the program
 }
 

@@ -1,18 +1,16 @@
 //program 12 - Longest Common Subsequence
 
-#include <iostream>
-#include <cstring>
+#include<bits/stdc++.h>
 using namespace std;
 
 // Function to find the length of longest common subsequence
-int lcs(string X, string Y, int m, int n)
-{
+int lcs(string X, string Y, int m, int n){
+
     int L[m + 1][n + 1];  // Create a 2D array to store the LCS lengths
 
     // Loop through the two strings
     for (int i = 0; i <= m; i++) {
         for (int j = 0; j <= n; j++) {
-
             // If one of the strings is empty, then there can be no common subsequence
             if (i == 0 || j == 0)
                 L[i][j] = 0;
