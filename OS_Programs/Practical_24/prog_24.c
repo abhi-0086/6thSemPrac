@@ -4,7 +4,7 @@
 #include<fcntl.h>
 #include<sys/stat.h>
 
-main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 
     struct stat statbuff; // Struct to hold file/directory information
     int check; // Return value of stat() function

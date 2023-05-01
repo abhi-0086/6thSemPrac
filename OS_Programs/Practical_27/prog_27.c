@@ -5,7 +5,7 @@
 
 void sig_alrm(int); // declaration of signal handler function
 
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     // register signal handler for SIGALRM
     if((signal(SIGALRM, sig_alrm))==SIG_ERR)
@@ -16,6 +16,7 @@ main(int argc, char *argv[])
 
     // pause the program until a signal is received
     pause();
+    return 0;
 }
 
 // implementation of signal handler function
@@ -23,5 +24,5 @@ void sig_alrm(int sig)
 {
     // check if the signal received is SIGALRM
     if(sig==SIGALRM)
-        printf("Wake Up");
+        printf("Wake Up\n");
 }

@@ -18,7 +18,7 @@
 
 void fun(int); // declaration of signal handler function
 
-main()
+int main()
 {
     char a[200];
 

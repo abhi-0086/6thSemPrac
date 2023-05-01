@@ -4,7 +4,7 @@
 #include<fcntl.h>
 #include<sys/stat.h>
 
-main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 
     struct stat statbuff; // Struct to hold file/directory information
     int check; // Return value of stat() function
@@ -13,7 +13,6 @@ main(int argc, char *argv[]) {
         printf("Can accept only two arguments"); // Print error message if incorrect number of arguments is passed
         exit(1);
     }
-
     // Get status information for the specified file/directory using stat() function
     check = stat(argv[1], &statbuff);
 

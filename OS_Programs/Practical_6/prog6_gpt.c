@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include<unistd.h>
 
 int main(void) {
     time_t start, end; // declare two variables of type "time_t" to hold the start and end times

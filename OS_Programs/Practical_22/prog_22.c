@@ -5,7 +5,6 @@
 int main(int argc, char *argv[]) {
 
     struct stat statbuf; // Struct to hold file/directory information
-
     // Attempt to get status information for the specified file/directory
     if (stat(argv[1], &statbuf) == -1) {
         perror ("Failed to get status of file/directory"); // Print error message if failed
@@ -20,6 +19,5 @@ int main(int argc, char *argv[]) {
             printf("%s : is a file\n",argv[1]);
         }
     }
-
     return 0;
 }

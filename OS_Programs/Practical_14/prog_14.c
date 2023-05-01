@@ -10,17 +10,15 @@ process*/
 #include<stdlib.h>
 #include<unistd.h>
 #include<signal.h>
-main()
+int main()
 {
     int fd;
-
     // Creating a child process using fork()
     if((fd=fork())<0)
     {
         printf("error in creating child");
         exit(1);
     }
-
     // Child process code: send a signal to itself to terminate
     if(fd==0)
         kill(getpid(),SIGKILL);
@@ -28,7 +26,7 @@ main()
     // Parent process code: wait for 2 seconds
     else
         sleep(2);
-
     // Print process information using the "ps" command
     system("ps -f");
+    return 0;
 }

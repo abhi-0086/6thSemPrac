@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include <sys/types.h>
 
-main()    // the main function
+int main()    // the main function
 {
     char g_name[10];
     gid_t gid;

@@ -9,8 +9,7 @@
 #include<error.h>
 #include<ctype.h>
 
-main()
-{
+int main(){
     char u_name[10]; // variable to hold the username entered by user
     char ch; // variable to hold the user's choice of input
     uid_t u_id; // variable to hold the user ID entered by user

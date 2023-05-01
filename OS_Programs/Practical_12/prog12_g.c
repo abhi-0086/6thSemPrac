@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-
 int main() {
     int fd;         // file descriptor for the opened file
     pid_t pid;      // process ID variable

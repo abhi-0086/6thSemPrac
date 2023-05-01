@@ -5,7 +5,7 @@
 #include<sys/stat.h>
 
 // Main function takes two arguments, argc (argument count) and argv (argument vector)
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     // Check if the argument count is not equal to 2
     if(argc!=2)
