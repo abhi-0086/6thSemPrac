@@ -1,7 +1,7 @@
 #include <stdio.h>      //include standard input/output library
 #include <stdlib.h>     //include standard library for functions such as atoi()
 #include <unistd.h>     //include library for functions such as fork()
-
+#include<sys/types.h>
 int main(int argc, char *argv[]) {  //start of main function, takes command line arguments as inputs
     //declare and initialize process ID variable for child process
     pid_t childpid = 0;  
