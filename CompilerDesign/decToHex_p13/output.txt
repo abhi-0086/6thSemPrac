@@ -1,0 +1,5 @@
+25 in hexadecimal: 0x19
+
+110 in hexadecimal: 0x6E
+
+2 in hexadecimal: 0x2

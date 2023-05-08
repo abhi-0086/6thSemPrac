@@ -1,24 +1,23 @@
-%option noyywrap
-
 %{
-#include <stdio.h>
 int line_count = 0;
 int char_count = 0;
 %}
 
 %%
-\n    { line_count++; }
-.     { char_count++; }
+\n      { line_count++; }   // Increment line count on newline character
+.       { char_count++; }  // Increment character count for all other characters
 %%
 
 int main() {
-    char input[1000];
-    printf("Enter your input (Press Ctrl+D to indicate end of input):\n");
-    while (fgets(input, sizeof(input), stdin) != NULL) {
-        yy_scan_string(input);
-        yylex();
-    }
+    yylex();
     printf("Number of lines: %d\n", line_count);
     printf("Number of characters: %d\n", char_count);
     return 0;
 }
+
+
+/*
+flex line_char_counter.l 
+cc lex.yy.c -o line_char_counter -lfl
+./line_char_counter
+*/

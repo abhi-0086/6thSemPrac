@@ -322,9 +322,6 @@ void yyfree ( void *  );
 #define YY_AT_BOL() (YY_CURRENT_BUFFER_LVALUE->yy_at_bol)
 
 /* Begin user sect3 */
-
-#define yywrap() (/*CONSTCOND*/1)
-#define YY_SKIP_YYWRAP
 typedef flex_uint8_t YY_CHAR;
 
 FILE *yyin = NULL, *yyout = NULL;
@@ -440,12 +437,11 @@ int yy_flex_debug = 0;
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
 #line 1 "line_char_counter.l"
-#line 4 "line_char_counter.l"
-#include <stdio.h>
+#line 2 "line_char_counter.l"
 int line_count = 0;
 int char_count = 0;
-#line 448 "lex.yy.c"
-#line 449 "lex.yy.c"
+#line 444 "lex.yy.c"
+#line 445 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -662,9 +658,9 @@ YY_DECL
 		}
 
 	{
-#line 9 "line_char_counter.l"
+#line 6 "line_char_counter.l"
 
-#line 668 "lex.yy.c"
+#line 664 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -724,20 +720,20 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 10 "line_char_counter.l"
-{ line_count++; }
+#line 7 "line_char_counter.l"
+{ line_count++; }   // Increment line count on newline character
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 11 "line_char_counter.l"
-{ char_count++; }
+#line 8 "line_char_counter.l"
+{ char_count++; }  // Increment character count for all other characters
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 12 "line_char_counter.l"
+#line 9 "line_char_counter.l"
 ECHO;
 	YY_BREAK
-#line 741 "lex.yy.c"
+#line 737 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1742,16 +1738,11 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 12 "line_char_counter.l"
+#line 9 "line_char_counter.l"
 
 
 int main() {
-    char input[1000];
-    printf("Enter your input (Press Ctrl+D to indicate end of input):\n");
-    while (fgets(input, sizeof(input), stdin) != NULL) {
-        yy_scan_string(input);
-        yylex();
-    }
+    yylex();
     printf("Number of lines: %d\n", line_count);
     printf("Number of characters: %d\n", char_count);
     return 0;
